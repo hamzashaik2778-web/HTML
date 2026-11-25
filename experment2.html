@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | City Health Clinic</title>
+    <meta name="description" content="Book a patient appointment online at City Health Clinic.">
+  </head>
+
+  <body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <h1>City Health Clinic</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <section id="services">
+        <h2>Our Services</h2>
+
+        <article>
+          <h3>General Checkup</h3>
+          <p>Routine health examinations.</p>
+        </article>
+
+        <article>
+          <h3>Dental Care</h3>
+          <p>Cleaning and treatment.</p>
+        </article>
+      </section>
+
+      <section id="appointment">
+        <h2>Book Appointment</h2>
+        <p>Fields marked with <strong>*</strong> are required.</p>
+
+        <form action="#" method="post">
+
+          <fieldset>
+            <legend>Patient Details</legend>
+
+            <p>
+              <label for="name">Full Name *</label><br>
+              <input type="text" id="name" name="name" required
+                     autocomplete="name" minlength="3">
+            </p>
+
+            <p>
+              <label for="email">Email Address *</label><br>
+              <input type="email" id="email" name="email" required
+                     autocomplete="email" aria-describedby="email-hint">
+              <br><small id="email-hint">Example: name@example.com</small>
+            </p>
+
+            <p>
+              <label for="phone">Phone Number *</label><br>
+              <input type="tel" id="phone" name="phone" required
+                     autocomplete="tel" pattern="[0-9]{10}"
+                     aria-describedby="phone-hint">
+              <br><small id="phone-hint">Enter 10 digits, no spaces</small>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Gender *</legend>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Appointment Details</legend>
+
+            <p>
+              <label for="date">Preferred Date *</label><br>
+              <input type="date" id="date" name="date" required>
+            </p>
+
+            <p>
+              <label for="department">Department *</label><br>
+              <select id="department" name="department" required>
+                <option value="">-- Choose a department --</option>
+                <option value="general">General Checkup</option>
+                <option value="dental">Dental Care</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="problem">Describe your problem</label><br>
+              <textarea id="problem" name="problem" rows="4" cols="40"
+                        maxlength="500"></textarea>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </section>
+
+      <aside>
+        <h2>Opening Hours</h2>
+        <p>Monday to Friday: 9:00 AM to 6:00 PM</p>
+      </aside>
+
+    </main>
+
+    <footer id="contact">
+      <h2>Contact</h2>
+      <address>
+        Email: <a href="mailto:clinic@example.com">clinic@example.com</a>
+      </address>
+    </footer>
+  </body>
+</html>

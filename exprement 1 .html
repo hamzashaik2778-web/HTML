@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Browser metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Student Registration | College Portal</title>
+
+    <meta name="description" content="Register as a new student at the college. Fill in your personal details, choose your course and submit the form.">
+    <meta name="keywords" content="student registration, college admission, online form">
+    <meta name="author" content="College Portal Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a4d8f">
+
+    <!-- Open Graph (link previews) -->
+    <meta property="og:title" content="Student Registration | College Portal">
+    <meta property="og:description" content="Register as a new student at the college.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- Lets keyboard users jump past the menu -->
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <h1>College Student Portal</h1>
+      <p>Welcome to the new student registration page</p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <section id="about">
+        <h2>About Registration</h2>
+
+        <article>
+          <h3>Who can register?</h3>
+          <p>All newly admitted students can register using this form.</p>
+        </article>
+
+        <article>
+          <h3>Documents needed</h3>
+          <p>Keep your ID proof and admission letter ready before you visit the office.</p>
+        </article>
+      </section>
+
+      <section id="registration">
+        <h2>Student Registration Form</h2>
+        <p>Fields marked with <strong>*</strong> are required.</p>
+
+        <form action="#" method="post">
+
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <p>
+              <label for="fullname">Full Name *</label><br>
+              <input type="text" id="fullname" name="fullname" required autocomplete="name">
+            </p>
+
+            <p>
+              <label for="email">Email Address *</label><br>
+              <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-hint">
+              <br><small id="email-hint">Example: name@example.com</small>
+            </p>
+
+            <p>
+              <label for="phone">Phone Number</label><br>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{10}" aria-describedby="phone-hint">
+              <br><small id="phone-hint">Enter 10 digits without spaces</small>
+            </p>
+
+            <p>
+              <label for="dob">Date of Birth *</label><br>
+              <input type="date" id="dob" name="dob" required autocomplete="bday">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Gender</legend>
+
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Course Details</legend>
+
+            <p>
+              <label for="course">Select Course *</label><br>
+              <select id="course" name="course" required>
+                <option value="">-- Choose a course --</option>
+                <option value="cse">B.Tech Computer Science</option>
+                <option value="ece">B.Tech Electronics</option>
+                <option value="mech">B.Tech Mechanical</option>
+                <option value="bca">BCA</option>
+                <option value="mba">MBA</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="year">Year of Study *</label><br>
+              <select id="year" name="year" required>
+                <option value="">-- Choose a year --</option>
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interests (select all that apply)</legend>
+
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label><br>
+
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label><br>
+
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <label for="coding">Coding Club</label><br>
+
+            <input type="checkbox" id="arts" name="interests" value="arts">
+            <label for="arts">Arts and Drama</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Information</legend>
+
+            <p>
+              <label for="address">Residential Address</label><br>
+              <textarea id="address" name="address" rows="4" cols="40" autocomplete="street-address"></textarea>
+            </p>
+
+            <p>
+              <input type="checkbox" id="agree" name="agree" required>
+              <label for="agree">I confirm that the details above are correct *</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </section>
+
+      <aside>
+        <h2>Help and Support</h2>
+        <ul>
+          <li><a href="#">Admission FAQ</a></li>
+          <li><a href="#">Fee Structure</a></li>
+          <li><a href="#">Hostel Information</a></li>
+        </ul>
+      </aside>
+
+    </main>
+
+    <footer id="contact">
+      <h2>Contact Us</h2>
+      <address>
+        Email: <a href="mailto:admissions@college.edu">admissions@college.edu</a>
+      </address>
+      <p>&copy; 2026 College Portal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
